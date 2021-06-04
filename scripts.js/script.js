@@ -35,5 +35,17 @@ dogs.forEach(dog => {
 });
 
 // counting
+console.count('foo');
+console.count('bar');
+console.count('bar');
+console.count('bar');
+console.count('bar');
 
 // timing
+console.time('fetching data');
+fetch('https://api.github.com/users/wesbos')
+  .then(data =>data.json())
+  .then(data => {
+    console.timeEnd('fetching data');
+    console.log(data);
+  });
